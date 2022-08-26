@@ -9,6 +9,11 @@ public class TankController : MonoBehaviour
 
     Rigidbody _rb = null;
 
+    public float MaxSpeed {
+        get => _moveSpeed;
+        set => _moveSpeed = value > 0 ? value : 0.1f;
+    }
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
